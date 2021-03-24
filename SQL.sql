@@ -21,8 +21,6 @@ SELECT "purchase_events"."id" AS "id",
   CAST("set_play_metadata"."set_play_guid" AS TEXT) AS "set_play_guid",
   "set_play_metadata"."set_id" AS "set_id (set_play_metadata)",
   "set_play_metadata"."play_id" AS "play_id (set_play_metadata)",
-  CAST("set_play_metadata"."set_guid" AS TEXT) AS "set_guid",
-  CAST("set_play_metadata"."play_guid" AS TEXT) AS "play_guid",
   CAST("set_play_metadata"."play_category" AS TEXT) AS "play_category",
   "set_play_metadata"."play_circulation_count" AS "play_circulation_count",
   "set_play_metadata"."play_retired" AS "play_retired",
@@ -46,3 +44,4 @@ SELECT "purchase_events"."id" AS "id",
   CAST("set_play_metadata"."nba_season" AS TEXT) AS "nba_season"
 FROM "public"."purchase_events" "purchase_events"
   INNER JOIN "public"."set_play_metadata" "set_play_metadata" ON ((CAST("purchase_events"."play_id" AS TEXT) = CAST("set_play_metadata"."play_guid" AS TEXT)) AND (CAST("purchase_events"."set_id" AS TEXT) = CAST("set_play_metadata"."set_guid" AS TEXT)))
+  
