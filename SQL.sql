@@ -1,8 +1,5 @@
 SELECT "purchase_events"."id" AS "id",
   "purchase_events"."created_at" AS "created_at",
-  "purchase_events"."listing_block_height" AS "listing_block_height",
-  "purchase_events"."purchase_block_height" AS "purchase_block_height",
-  "purchase_events"."blocks_to_purchase" AS "blocks_to_purchase",
   CAST("purchase_events"."seller" AS TEXT) AS "seller",
   CAST("purchase_events"."seller_username" AS TEXT) AS "seller_username",
   CAST("purchase_events"."buyer" AS TEXT) AS "buyer",
@@ -38,7 +35,6 @@ SELECT "purchase_events"."id" AS "id",
   "set_play_metadata"."player_id" AS "player_id",
   CAST("set_play_metadata"."player_name" AS TEXT) AS "player_name",
   CAST("set_play_metadata"."primary_position" AS TEXT) AS "primary_position",
-  
   CAST("set_play_metadata"."away_team_name" AS TEXT) AS "away_team_name",
   CAST("set_play_metadata"."home_team_name" AS TEXT) AS "home_team_name",
   CAST("set_play_metadata"."nba_season" AS TEXT) AS "nba_season"
