@@ -31,4 +31,3 @@ SELECT "purchase_events"."created_at" AS "created_at",
   CAST("set_play_metadata"."nba_season" AS TEXT) AS "nba_season"
 FROM "public"."purchase_events" "purchase_events"
   INNER JOIN "public"."set_play_metadata" "set_play_metadata" ON ((CAST("purchase_events"."play_id" AS TEXT) = CAST("set_play_metadata"."play_guid" AS TEXT)) AND (CAST("purchase_events"."set_id" AS TEXT) = CAST("set_play_metadata"."set_guid" AS TEXT)))
-  
